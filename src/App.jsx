@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import MachinesSkills from "./pages/MachinesSkills";
 import Employees from "./pages/Employees";
@@ -23,6 +22,7 @@ export default function App() {
   const [presences, setPresences] = useState([]);
   const [parts, setParts] = useState([]);
   const [machiningTimes, setMachiningTimes] = useState({}); // { partRef: { machineId: hours } }
+  const [assignments, setAssignments] = useState([]); // lifted from Dashboard so Parts can populate it
 
   const shared = {
     machines, setMachines,
@@ -31,6 +31,7 @@ export default function App() {
     presences, setPresences,
     parts, setParts,
     machiningTimes, setMachiningTimes,
+    assignments, setAssignments,
   };
 
   return (
